@@ -67,3 +67,11 @@ body {
   align-items: flex-start;
   background-repeat: no-repeat;
 }
+
+.res-form {
+  border: 5px solid black;
+  height: 50vh;
+  width: 25vw;
+  align-content: space-around;
+
+}

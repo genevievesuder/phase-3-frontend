@@ -12,9 +12,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await fetch("http://localhost:9393/rooms")
+        const resp = await fetch("http://localhost:9393/reservations")
         const data = await resp.json()
-        setData(data)
+        console.log(data)
       } catch (error) {
         alert(error)
       }

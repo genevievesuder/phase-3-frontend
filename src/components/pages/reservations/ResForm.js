@@ -1,10 +1,26 @@
 
 
 const ResForm = () => {
+
+    const initialFormValue = {
+        name: '',
+        date: '',
+        length_of_stay: '',
+        room: ''
+
+    }
     
     return(
        <div className="res-form">
-        <h1>Res form</h1>
+            <label>Name</label>
+            <br/>
+            <input placeholder="Name on Reservation"></input>
+            <br/>
+            <label>Check-in</label>
+            <br/>
+
+        {/* <label>Check-In</label> */}
+            <input type="date" placeholder="Check-in"></input>
        </div>
     )
 }

@@ -16,7 +16,7 @@ const Reservations = ({rooms}) => {
 
     return(
        <div className="reservations">
-        <h1>Reservations</h1>
+        <h1 id="res-container">Reservations</h1>
         <button className="show-form-btn" onClick={handleShowForm}>Create a Reservation</button>
         {form ? (
         <ResForm />
