@@ -31,7 +31,7 @@ const Reservations = () => {
     return(
        <div className="reservations">
         <h1>Reservations</h1>
-        <button className="show-form-btn" onClick={handleShowForm}>BUTTON</button>
+        <button className="show-form-btn" onClick={handleShowForm}>Create a Reservation</button>
         {form ? (
         <ResForm />
         ) : null}
