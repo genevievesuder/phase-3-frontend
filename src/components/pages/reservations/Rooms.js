@@ -1,12 +1,11 @@
 
 
-const Rooms = ({name, image, description}) => {
+const Rooms = ({beds, image_url}) => {
     
     return(
        <div className="rooms">
-        <h1>{name}</h1>
-        <img src={image} alt={name}/>
-        <p>{description}</p>
+        <h1>{beds}</h1>
+        <img src={image_url} alt={beds}/>
        </div>
     )
 }
