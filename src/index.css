@@ -68,18 +68,9 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
-.rooms {
-  border: 5px black solid;
-  width: 50vw;
-  height: 150vh;
-
-}
-
 .reservations {
   display: grid;
-  grid-template-rows: 15vh 15vh 70vh ;
+  grid-template-rows: 25vh 20vh 55vh;
   grid-template-columns: 25vw 25vw 25vw 25vw;
   border: 5px solid red;
 }
@@ -88,6 +79,7 @@ body {
   grid-row: 1;
   grid-column: 1 / span 4;  border: 5px solid pink;
 }
+
 .show-form-btn {
   height:100%;
   width:24.8vw;
@@ -97,9 +89,8 @@ body {
   float:right;
   border: 5px solid blue;
   height: 15vh;
-width:75%;
+  width:75%;
   align-content: space-around;
-  
 }
 
 .room-includes-container {
@@ -109,20 +100,27 @@ width:75%;
 
 .room-container {
   grid-row: 3;
-
+  min-height: 100%;
+  border: 5px solid yellow;
 }
 
 .room-card {
   border: 5px solid black;
   display:grid;
-
+  min-height: 100%;
+  max-height: 100%
 }
 
-
-.bed-images {
-  height:40vh;
-  width:25vw;
-  object-fit: fill;
-  overflow: hide;
+.room-titles{
+  text-align: center;
+  border: 2px solid green;
+  height: 10vh;
+  width: 25vw;
 }
 
+  .bed-images {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding: 3px;
+  }
