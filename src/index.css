@@ -6,11 +6,10 @@
 
 body {
   margin: 0;
-  display:flex;
 }
 
 .nav {
-  backdrop-filter: blur(1px);
+  /* backdrop-filter: blur(2px); */
   overflow: hidden;
   background-color: rgba(51, 51, 51, 0.167);
   font-family: 'El Messiri', sans-serif;
@@ -19,7 +18,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
-  width: 100%;
+  min-width: 100%;
 }
 
 .site-title {

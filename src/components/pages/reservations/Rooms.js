@@ -2,7 +2,6 @@
 
 const Rooms = ({bed_size, room_name, image_url}) => {
     
-    console.log(room_name)
     return(
         <div className="room-container">
             <div className="room-card">
