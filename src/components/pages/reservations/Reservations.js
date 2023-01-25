@@ -11,9 +11,13 @@ const Reservations = ({data}) => {
         reservations={room.reservations}
         />);
 
+        const handleClick = e => {
+            console.log("working")
+            
+        }
 
     return(
-       <div className="reservations">
+       <div onClick = {handleClick} className="reservations">
             <ResForm 
                 data={data}/>
             {mappedRooms}
