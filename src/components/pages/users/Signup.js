@@ -9,6 +9,7 @@ import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 
 
+
 const Signup = ({setUser, setMessage, setToggleAuth}) => {
     const [user, setUserObj] = useState({
         username: "",
@@ -24,10 +25,38 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
         }))
     }
 
+        
     const handleSubmit = (e) => {
         e.preventDefault()
-        
-    }
+        fetch("http://localhost:9393/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+        })
+           .then(response => {
+            if (response.status !== 201) {
+          //     response.json()
+          //     .then(reservationObj => {
+          //       // debugger
+          //       setReservations(currentReservations => [reservationObj.reservation, ...currentReservations])
+          //     })
+          //   }
+          //   else {
+              response.json()
+              .then(messageObj => alert(messageObj.message))
+            }
+           })
+          .catch(error => alert(error))
+          setUserObj({
+            username: "",
+            email: "",
+            password: "",
+            password_confirmation: ""
+          })
+      }
+
 
   return (
     <CssVarsProvider>
