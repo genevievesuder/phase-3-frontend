@@ -1,4 +1,5 @@
 import React from 'react';
+// import logo from '../hotel_logo.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 const Navbar = () => {
@@ -6,8 +7,9 @@ const Navbar = () => {
     return (
         <nav className="nav">
         <Link to="/" className="site-title">
+        {/* <img src={logo} alt="Home"/> */}
         Home
-          </Link>
+        </Link>
         <ul>
           <CustomLink to="/reservations">Reservations</CustomLink>
           <CustomLink to="/amenities">Amenities</CustomLink>
