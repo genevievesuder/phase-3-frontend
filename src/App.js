@@ -23,6 +23,7 @@ function App() {
   }, []);
 
 
+  
   return (
     <><Navbar />
     <div className="app">

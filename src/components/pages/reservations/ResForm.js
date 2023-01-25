@@ -1,5 +1,5 @@
-// import {useState} from "react"
-// import RoomInclusions from "./RoomInclusions"
+import {useState} from "react"
+import RoomInclusions from "./RoomInclusions"
 
 const ResForm = ({data}) => {
     const [form, showForm] = useState(false)
@@ -13,9 +13,9 @@ const ResForm = ({data}) => {
             check_out:""
     })
 
-//         const handleChange = ({target: {name, value}}) => {
-//             setNewReservation({...newReservation, [name]: value})
-//         }
+        const handleChange = ({target: {name, value}}) => {
+            setNewReservation({...newReservation, [name]: value})
+        }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -26,9 +26,19 @@ const ResForm = ({data}) => {
           },
           body: JSON.stringify(newReservation)
         })
-          .then(response => response.json())
-          .then(newData => setNewReservation(currentReservations =>
-            [newData, ...currentReservations]))
+           .then(response => {
+            if (response.status !== 201) {
+          //     response.json()
+          //     .then(reservationObj => {
+          //       // debugger
+          //       setReservations(currentReservations => [reservationObj.reservation, ...currentReservations])
+          //     })
+          //   }
+          //   else {
+              response.json()
+              .then(messageObj => alert(messageObj.message))
+            }
+           })
           .catch(error => alert(error))
           setNewReservation({
             room_id: "",
@@ -42,9 +52,9 @@ const ResForm = ({data}) => {
       }
   
     
-//     const handleShowForm = () => {
-//         showForm(currentState => !currentState); 
-//     }
+    const handleShowForm = () => {
+        showForm(currentState => !currentState); 
+    }
 
     return(
     <div className="form-container">
@@ -53,6 +63,7 @@ const ResForm = ({data}) => {
        <div className="res-form">
         <form onSubmit={handleSubmit}> 
             <select onChange={handleChange} name="room_id">
+                <option value = "">Select your Room</option>
                 <option value = "1">The Aegean</option>
                 <option value = "2">The Cerulean</option>
                 <option value = "3">The Sapphire</option>
@@ -71,10 +82,10 @@ const ResForm = ({data}) => {
         </form>
        </div>) : null}
 
-//             <RoomInclusions />
-//        </div>
+             <RoomInclusions />
+       </div>
             
-//     )
-// }
+     )
+ }
 
-// export default ResForm;
+export default ResForm;
