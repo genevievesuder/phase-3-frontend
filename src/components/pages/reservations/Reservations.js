@@ -8,7 +8,8 @@ const Reservations = ({data}) => {
         bed_size = {room.bed_size} room_name= {room.room_name}
         image_url= {room.image_url}  
         key={room.id} 
-        reservations={room.reservations}/>);
+        reservations={room.reservations}
+        />);
 
 
     return(

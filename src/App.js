@@ -24,14 +24,15 @@ function App() {
 
 
   return (
-    <><Navbar />
-    <div className="app">
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/reservations" element={<Reservations data={data}/>} />
-        <Route path="/amenities" element={<Amenities/>} />
-      </Routes>
-    </div>
+    <>
+      <Navbar />
+        <div className="app">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/reservations" element={<Reservations data={data}/>} />
+            <Route path="/amenities" element={<Amenities/>} />
+          </Routes>
+        </div>
     </>
   )
 }
