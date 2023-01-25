@@ -1,10 +1,10 @@
 import {useState} from "react"
 import RoomInclusions from "./RoomInclusions"
 
-const ResForm = () => {
+const ResForm = ({data}) => {
     const [form, showForm] = useState(false)
     const [newReservation, setNewReservation] = useState({
-            room: "",
+            room_id: "",
             first_name: "",
             last_name: "",
             email: "",
@@ -31,7 +31,7 @@ const ResForm = () => {
             [newData, ...currentReservations]))
           .catch(error => alert(error))
           setNewReservation({
-            room: "",
+            room_id: "",
             first_name: "",
             last_name: "",
             email: "",
@@ -52,22 +52,21 @@ const ResForm = () => {
             {form ? (
        <div className="res-form">
         <form onSubmit={handleSubmit}> 
-            <label>Name</label>
-            <select name="">
-                <option value = "Room 1"></option>
-                <option value = "Room 2"></option>
-                <option value = "Room 3"></option>
-                <option value = "Room 4"></option>
-
+            <select onChange={handleChange} name="room_id">
+                <option value = "1">The Aegean</option>
+                <option value = "2">The Cerulean</option>
+                <option value = "3">The Sapphire</option>
+                <option value = "4">The Lapis Lazuli Suite</option>
             </select>
-            <input onChange = {handleChange} name= "first_name" type = "text" value = {first_name} placeholder="First Name on Reservation"></input>
-            <input onChange = {handleChange} name= "last_name" type = "text" value = {last_name} placeholder="Last Name on Reservation"></input>
-            <input onChange = {handleChange} name= "email" type = "text" value = {email} placeholder="Email"></input>
-            <input onChange = {handleChange} name= "phone_number" type = "text" value = {phone_number} placeholder="Phone Number"></input>
+
+            <input onChange = {handleChange} name= "first_name" type = "text" value = {data.first_name} placeholder="First Name on Reservation"></input>
+            <input onChange = {handleChange} name= "last_name" type = "text" value = {data.last_name} placeholder="Last Name on Reservation"></input>
+            <input onChange = {handleChange} name= "email" type = "text" value = {data.email} placeholder="Email"></input>
+            <input onChange = {handleChange} name= "phone_number" type = "text" value = {data.phone_number} placeholder="Phone Number"></input>
             <label>Check-in</label>
-            <input onChange = {handleChange} name = "check-in" type="date" placeholder="Check-in"></input> 
+            <input onChange = {handleChange} name = "check_in" value = {data.check_in} type="date" placeholder="Check-in"></input> 
             <label>Check-Out</label>
-            <input onChange = {handleChange} name = "check-out" type="date" placeholder="Check-Out"></input> 
+            <input onChange = {handleChange} name = "check_out" value = {data.check_out} type="date" placeholder="Check-Out"></input> 
             <button type="submit" >Reserve Your Room </button>
         </form>
        </div>) : null}

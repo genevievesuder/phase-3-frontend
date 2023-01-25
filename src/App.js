@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resp = await fetch("http://localhost:9393/rooms")
+        const resp = await fetch("http://127.0.0.1:9393/rooms")
         const data = await resp.json()
         setData(data)
       } catch (error) {
@@ -28,7 +28,7 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/reservations" element={<Reservations rooms={data}/>} />
+        <Route path="/reservations" element={<Reservations data={data}/>} />
         <Route path="/amenities" element={<Amenities/>} />
       </Routes>
     </div>
