@@ -15,7 +15,7 @@ const Account = ({data, currentUser, setCurrentUser}) => {
 
   return (
     <div>
-      <UserHomepage currentUser={currentUser} data={data}/>
+      <UserHomepage currentUser={currentUser} setCurrentUser={setCurrentUser} data={data}/>
     </div>
   )
 }
