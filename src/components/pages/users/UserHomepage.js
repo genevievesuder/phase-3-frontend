@@ -3,6 +3,13 @@ import ReservationCard from './ReservationCard';
 
 const UserHomepage = ({currentUser, data}) => {
 
+// const [welcomeMsg, setWelcomeMsg] = useState("")
+
+// const checkForReservation = () => {
+  
+// }
+// checkForReservation()
+
   // const mappedRooms = data.map(room => 
   //   <ReservationCard
   //     {...data}
@@ -25,10 +32,19 @@ const UserHomepage = ({currentUser, data}) => {
       key={user.id}
     />)
 
+
+console.log(currentUser.reservations)
   return (
     <div className="user-container">
       <div className="welcome-user">
         <h1>Welcome, {currentUser.first_name}</h1>
+
+      {currentUser.reservations !== [] ? (
+        "Your upcoming Reservations"
+        ) : (
+        "You currently have no reservations. Book now!")
+      }
+
       </div>   
         {/* {mappedRooms} */}
         {mappedCurrentUserData}
