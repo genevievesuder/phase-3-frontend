@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReservationCard from './ReservationCard';
 
-const UserHomepage = ({currentUser, data}) => {
+const UserHomepage = ({setCurrentUser,currentUser, data}) => {
 
 // const [welcomeMsg, setWelcomeMsg] = useState("")
 
@@ -22,16 +22,19 @@ const UserHomepage = ({currentUser, data}) => {
 
     // console.log(mappedRooms)
 
-  const mappedCurrentUserData = currentUser.reservations.map(user => 
-    <ReservationCard 
+  const mappedCurrentUserData = currentUser.reservations.map(res => { 
+    const room = data.find(room => room.id === res.room_id)
+    return <ReservationCard 
       // {...currentUser.reservations} 
-      check_in={user.check_in} 
-      check_out={user.check_out} 
-      room={user.room_id} 
+      currentUser={currentUser}
+      setCurrentUser = {setCurrentUser}
+      check_in={res.check_in} 
+      check_out={res.check_out} 
+      room={room} 
       data={data}
-      key={user.id}
-      reservationId={user.id}
-    />)
+      key={res.id}
+      reservationId={res.id}
+    />})
 
 
 console.log(currentUser.reservations)
