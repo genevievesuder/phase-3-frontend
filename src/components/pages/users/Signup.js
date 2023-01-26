@@ -10,7 +10,7 @@ import Link from '@mui/joy/Link';
 
 
 
-const Signup = ({setUser, setMessage, setToggleAuth}) => {
+const Signup = ({setCurrentUser, setMessage, setToggleAuth}) => {
     const [user, setUserObj] = useState({
         username: "",
         email: "",
@@ -37,17 +37,16 @@ const Signup = ({setUser, setMessage, setToggleAuth}) => {
         })
            .then(response => {
             if (response.status !== 201) {
-          //     response.json()
-          //     .then(reservationObj => {
-          //       // debugger
-          //       setReservations(currentReservations => [reservationObj.reservation, ...currentReservations])
-          //     })
-          //   }
-          //   else {
+              response.json()
+              .then(userObj => {
+                // debugger
+                setCurrentUser(userObj.user)
+               })
+            } else {
               response.json()
               .then(messageObj => alert(messageObj.message))
-            }
-           })
+            
+           }})
           .catch(error => alert(error))
           setUserObj({
             username: "",

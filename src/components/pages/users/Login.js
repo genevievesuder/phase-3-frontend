@@ -9,7 +9,7 @@ import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 
 
-const Login = ({setUser, setMessage, setToggleAuth}) => {
+const Login = ({setMessage, setToggleAuth, setCurrentUser}) => {
     const [user, setUserObj] = useState({
         email: "",
         password: "",
@@ -35,7 +35,7 @@ const Login = ({setUser, setMessage, setToggleAuth}) => {
         .then(resp => {
           if (resp.ok) {
             resp.json().then(userObj => {
-              setUser(userObj.user)
+              setCurrentUser(userObj.user)
               setMessage("User successfully logged in!")
             })
           } else {
