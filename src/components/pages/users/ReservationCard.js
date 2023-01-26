@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-const ReservationCard = ({check_in, check_out, room, data}) => {
+const ReservationCard = ({check_in, check_out, room, data, reservationId}) => {
 const [resRoomImg, setResRoomImg] = useState("")
 
 // const arr = [...data]
@@ -31,7 +31,13 @@ const handleEdit = () => {
 
 //DELETE
 const handleDelete = () => {
+    fetch(`http://localhost:9393/reservations/${reservationId.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => console.log("deleted!"));
 }
+console.log(reservationId)
 
   return (
     <div className="user-reservation-card">
