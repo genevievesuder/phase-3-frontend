@@ -30,6 +30,7 @@ const UserHomepage = ({currentUser, data}) => {
       room={user.room_id} 
       data={data}
       key={user.id}
+      reservationId={user.id}
     />)
 
 
