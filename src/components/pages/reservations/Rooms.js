@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Rooms = ({bed_size, room_name, image_url, k}) => {
+const Rooms = ({bed_size, room_name, image_url}) => {
     const [toggleDescription, setToggleDescription] = useState(true)
 
     const handleClick = e => {

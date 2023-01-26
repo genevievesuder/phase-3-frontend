@@ -12,8 +12,7 @@ const Reservations = ({data}) => {
         reservations={room.reservations}
         />);
 
-   
-
+ 
     return(
        <div className="reservations">
             <ResForm data={data}/>
