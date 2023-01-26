@@ -5,6 +5,7 @@ const UserHomepage = ({currentUser, data}) => {
 
   const mappedRooms = data.map(room => 
     <ReservationCard
+      {...data}
       bed_size = {room.bed_size} 
       room_name= {room.room_name}
       image_url= {room.image_url}  
@@ -20,6 +21,7 @@ const UserHomepage = ({currentUser, data}) => {
       check_in={user.check_in} 
       check_out={user.check_out} 
       room={user.room_id} 
+      data={data}
       key={user.id}
     />)
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
-const ReservationCard = ({check_in, check_out, room, room_name, image_url}) => {
-  
+import { useState, useEffect } from 'react'
+
+const ReservationCard = ({check_in, check_out, room, data}) => {
 const [resRoomImg, setResRoomImg] = useState("")
 
-const arr = [...image_url]
+const arr = [...data]
 // console.log(arr[1].image_url)
 // console.log("hi")
   const room1 = arr[0].image_url
