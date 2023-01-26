@@ -3,15 +3,15 @@ import ReservationCard from './ReservationCard';
 
 const UserHomepage = ({currentUser, data}) => {
 
-  const mappedRooms = data.map(room => 
-    <ReservationCard
-      {...data}
-      bed_size = {room.bed_size} 
-      room_name= {room.room_name}
-      image_url= {room.image_url}  
-      key={room.id} 
-      reservations={room.reservations}
-    />);
+  // const mappedRooms = data.map(room => 
+  //   <ReservationCard
+  //     {...data}
+  //     bed_size = {room.bed_size} 
+  //     room_name= {room.room_name}
+  //     image_url= {room.image_url}  
+  //     key={room.id} 
+  //     reservations={room.reservations}
+  //   />);
 
     // console.log(mappedRooms)
 
@@ -30,7 +30,7 @@ const UserHomepage = ({currentUser, data}) => {
       <div className="welcome-user">
         <h1>Welcome, {currentUser.first_name}</h1>
       </div>   
-        {mappedRooms}
+        {/* {mappedRooms} */}
         {mappedCurrentUserData}
     </div>
   )
