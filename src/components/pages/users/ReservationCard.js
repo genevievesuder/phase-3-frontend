@@ -25,11 +25,21 @@ const [resRoomImg, setResRoomImg] = useState("")
 //   }
 //   imageFunction()
 
+// PATCH
+const handleEdit = () => {
+}
+
+//DELETE
+const handleDelete = () => {
+}
+
   return (
     <div className="user-reservation-card">
           <div className="user-left">
             <p className="user-res-room">Your Room: {room}</p>
             <p className="user-res-date">Check-in Date: {check_in} - Check-out Date: {check_out}</p>
+          <button onClick={handleEdit} className="edit-res">Edit your Reservation</button>
+          <button onClick={handleDelete} className="delete-res">Cancel your Reservation</button>
           </div>
           <div className="user-right">
             {/* <img className="res-room-img" src={resRoomImg} alt="your room" /> */}
