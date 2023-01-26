@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [data, setData] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
   // const [message, setMessage] = useState(null)
  
 
@@ -35,7 +36,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/reservations" element={<Reservations data={data}/>} />
             <Route path="/amenities" element={<Amenities  data={data}/>} />
-            <Route path="/account" element={<Account  data={data}/>} />
+            <Route path="/account" element={<Account  currentUser = {currentUser} setCurrentUser ={setCurrentUser} data={data}/>} />
           </Routes>
         </div>
     </>
