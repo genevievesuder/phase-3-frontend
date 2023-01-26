@@ -11,17 +11,17 @@ const Rooms = ({bed_size, room_name, image_url}) => {
     return(
         <div className="room-container"  >
             
-            <div className="room-card" 
-                
-                onMouseEnter={ handleHover}  >  
-                
+            <div className="room-card" onMouseEnter={handleHover} onMouseLeave={handleHover}>  
                 {toggleDescription ? (
                 <>
                     <h2 className="room-titles">{room_name}</h2>
-                    <img className = "bed-images" src={image_url} alt={room_name}/> 
+                    <img className="bed-images" src={image_url} alt={room_name}/> 
                 </>
-            ) : ( 
-                <p onMouseLeave={ handleHover}>{bed_size} <br/> </p> )}
+                ) : ( 
+                <>
+                    <p className="hover-bed">{bed_size}<br/></p> 
+                </>
+                )}
             </div>
        </div>
     )

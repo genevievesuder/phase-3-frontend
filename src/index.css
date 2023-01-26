@@ -171,6 +171,11 @@ body {
   padding: 3px;
 }
 
+.hover-bed {
+  min-height: 23vh;
+  width: 23vw;
+}
+
 .user-container {
   background-color: rgb(236, 34, 34);
   display: flex grid;
