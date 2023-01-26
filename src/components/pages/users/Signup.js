@@ -36,7 +36,7 @@ const Signup = ({setCurrentUser, setMessage, setToggleAuth}) => {
           body: JSON.stringify(user)
         })
            .then(response => {
-            if (response.status !== 201) {
+            if (response.status === 201) {
               response.json()
               .then(userObj => {
                 // debugger
