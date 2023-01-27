@@ -36,10 +36,12 @@ const handleShowUpdateForm = () => {
   
   return (
     <div className="user-reservation-card">
+      <span className="res-title">Your upcoming stay at the {room.room_name}</span>
           <div className="user-left">
-            <p className="user-res-room">Your Room: {room.room_name}</p>
-            <p className="user-res-date">Check-in Date: {check_in} - Check-out Date: {check_out}</p>
-          <button onClick = {handleShowUpdateForm} className="edit-res">Edit your Reservation</ button>
+            <p className="user-res-details">Reservation Details<br/>Check-in: {check_in} - Check-out: {check_out}<br/>
+            {room.room_name} at Hotel Azure <br/>This room has {room.bed_size} {currentUser.email}
+            </p>
+          <button className="show-mod-form-btn" onClick = {handleShowUpdateForm}>Modify this Reservation</ button>
           {showUpdateForm ?  (
           <UpdateResForm        
             currentUser={currentUser}
@@ -50,9 +52,9 @@ const handleShowUpdateForm = () => {
             data={data} 
             reservationId={reservationId}/>
           ) : (null)}
-          <button   
-            onClick={handleDelete} 
-            className="delete-res">Cancel your Reservation</button>
+
+          <button onClick={handleDelete} className="del-res-btn">Cancel this Reservation</button>
+
           </div>
           <div className="user-right">
             <img className="res-room-img" src={room.image_url} alt="your room" />

@@ -58,25 +58,28 @@ const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentU
 
   return (
     <div>
-             <div className="res-form">
-        <form onSubmit={handleEdit}> 
-            <select value ={newReservation.room_id} onChange={handleChange} name="room_id">
+             <div className="mod-res-form-container">
+        <form className="mod-res-form" onSubmit={handleEdit}> 
+            <select className="mod-room-sel" value ={newReservation.room_id} onChange={handleChange} name="room_id">
                 <option value = "">Select your Room</option>
                 <option value = "1">The Aegean</option>
                 <option value = "2">The Cerulean</option>
                 <option value = "3">The Sapphire</option>
                 <option value = "4">The Lapis Lazuli Suite</option>
             </select>
-
-            <input onChange = {handleChange} name= "first_name" type = "text" value = {newReservation.first_name} placeholder="First Name on Reservation"></input>
-            <input onChange = {handleChange} name= "last_name" type = "text" value = {newReservation.last_name} placeholder="Last Name on Reservation"></input>
-            <input onChange = {handleChange} name= "email" type = "text" value = {newReservation.email} placeholder="Email"></input>
-            <input onChange = {handleChange} name= "phone_number" type = "text" value = {newReservation.phone_number} placeholder="Phone Number"></input>
-            <label>Check-in</label>
-            <input onChange = {handleChange} name = "check_in" value = {newReservation.check_in} type="date" placeholder="Check-in"></input> 
-            <label>Check-Out</label>
-            <input onChange = {handleChange} name = "check_out" value = {newReservation.check_out} type="date" placeholder="Check-Out"></input> 
-            <button type="submit" >Reserve Your Room </button>
+            {/* <br/>
+            <input className="mod-select" onChange = {handleChange} name= "first_name" type = "text" value = {newReservation.first_name} placeholder="First Name on Reservation"></input><br/>
+            <input className="mod-select" onChange = {handleChange} name= "last_name" type = "text" value = {newReservation.last_name} placeholder="Last Name on Reservation"></input><br/>
+            <input className="mod-select" onChange = {handleChange} name= "email" type = "text" value = {newReservation.email} placeholder="Email"></input><br/>
+            <input className="mod-select" onChange = {handleChange} name= "phone_number" type = "text" value = {newReservation.phone_number} placeholder="Phone Number"></input> */}
+            <br/>
+            <label className="mod-label">Check-in Date</label><br/>
+            <input className="mod-cal" onChange = {handleChange} name = "check_in" value = {newReservation.check_in} type="date" placeholder="Check-in"></input> 
+            <br/>
+            <label className="mod-label">Check-Out Date</label><br/>
+            <input className="mod-cal" onChange = {handleChange} name = "check_out" value = {newReservation.check_out} type="date" placeholder="Check-Out"></input> 
+            <br/>
+            <button className="mod-submit" type="submit" >Update Reservation</button>
         </form>
        </div>
 
