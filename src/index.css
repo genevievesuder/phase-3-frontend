@@ -85,6 +85,10 @@ min-height: 100vh;
   background-image: url("https://image-tc.galaxy.tf/wijpeg-cdmw1fj4er962o2mnhxhpwlte/terrace1-high-res-2-25750b.jpg?width=1920");
   min-height: 180vh;
   min-width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  position:fixed;
 }
 
 .message_to_guest {
@@ -93,15 +97,19 @@ min-height: 100vh;
   color: black;
   font-size: 1.5em;
   font-family: 'El Messiri', sans-serif;
-  width:30vw;
+}
 
+#message1 {
+  width: 77vw;
+  margin:auto;
 }
 
 #message2 {
-  /* position:absolute; */
-  top: 40%;
-  margin-top:65vh;
-}
+  margin-top:40vh;
+  left: 50em;
+  height: 20vh;
+  width:50vw;
+  margin-left:45vw;}
 
 /* HOME END */
 

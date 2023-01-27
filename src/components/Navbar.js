@@ -5,8 +5,9 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 const Navbar = () => {
 
     return (
+      <>
         <nav className="nav">
-        <Link to="/" className="site-title">
+        <Link to="/" className="site-title" >
         Hotel Azure
         </Link>
         <ul className='nav_list'>
@@ -15,6 +16,8 @@ const Navbar = () => {
           <CustomLink to="/account" id="account_button">Account</CustomLink>
         </ul>
         </nav>
+     
+      </>
     )
 }
 
