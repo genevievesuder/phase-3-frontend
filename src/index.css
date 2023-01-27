@@ -7,22 +7,20 @@
 body {
   margin: 0;
   /* padding: 0; */
-  background-color: lightblue;
+  background-color:rgba(111, 110, 110,.5);
 }
-
 /* NAV START */
 
 .nav {
   z-index: 1000;
-  background-color: black;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(111, 110, 110,.5);
+  width: 100vw;
   position: sticky;
   top: 0px;
   color: white;
   font-family: 'El Messiri', sans-serif;
-
+  display:flex;
   /* background-color: rgba(51, 51, 51, 0.167);
   font-family: 'El Messiri', sans-serif;
   display: flex;
@@ -37,32 +35,39 @@ body {
   /* float:right; */
 }
 
-.site-title {
-  font-size: 2rem;
-  
-}
-
 .nav_list {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
+  /* display: flex; */
   gap: 1rem;
   /* font-size: 1rem; */
   /* float: left;   */
 
 }
 
-.nav a {
+.nav_account_button {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* display: flex; */
+flex-direction: row-reverse;  /* font-size: 1rem; */
+  /* padding: 1rem; */
+
+  float: right;  
+
+}
+
+ .nav a {
   color: rgb(68, 68, 73);
   text-decoration: none;
   height: 100%;
   /* display: flex; */
-  align-items: center;
+   align-items: center;
   padding: 1rem;
   color: white;
   margin-bottom:2vh;
-}
+} 
 
 .nav li.active {
   background-color: rgba(160, 153, 153, 0.385);
@@ -88,7 +93,6 @@ min-height: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 0;
-  position:fixed;
 }
 
 .message_to_guest {
