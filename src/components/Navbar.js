@@ -9,10 +9,10 @@ const Navbar = () => {
         <Link to="/" className="site-title">
         Hotel Azure
         </Link>
-        <ul>
+        <ul className='nav_list'>
           <CustomLink to="/reservations">Reservations</CustomLink>
           <CustomLink to="/amenities">Amenities</CustomLink>
-          <CustomLink to="/account">Account</CustomLink>
+          <CustomLink to="/account" id="account_button">Account</CustomLink>
         </ul>
         </nav>
     )
