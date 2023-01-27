@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   // const [message, setMessage] = useState(null)
- 
+  console.log("printing current user " + currentUser)
 
   useEffect(() => {
     const fetchData = async () => {

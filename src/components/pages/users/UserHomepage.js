@@ -16,7 +16,7 @@ const UserHomepage = ({setCurrentUser,currentUser, data}) => {
     />})
 
 
-console.log(currentUser)
+// console.log(currentUser)
   return (
     <div className="user-container">
       <div className="welcome-user">

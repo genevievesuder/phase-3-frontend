@@ -50,7 +50,9 @@ const handleShowUpdateForm = () => {
             data={data} 
             reservationId={reservationId}/>
           ) : (null)}
-          <button onClick={handleDelete} className="delete-res">Cancel your Reservation</button>
+          <button   
+            onClick={handleDelete} 
+            className="delete-res">Cancel your Reservation</button>
           </div>
           <div className="user-right">
             <img className="res-room-img" src={room.image_url} alt="your room" />

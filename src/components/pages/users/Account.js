@@ -9,7 +9,8 @@ const Account = ({data, currentUser, setCurrentUser}) => {
     const [toggleAuth, setToggleAuth] = useState(false)
 
     if (!currentUser) {
-      return (toggleAuth && <Login setCurrentUser={setCurrentUser} setToggleAuth={setToggleAuth} setMessage={setMessage}/>) || (<Signup setCurrentUser={setCurrentUser} setToggleAuth={setToggleAuth} setMessage={setMessage}/>)
+      return (
+        toggleAuth && <Login setCurrentUser={setCurrentUser} setToggleAuth={setToggleAuth} setMessage={setMessage}/>) || (<Signup setCurrentUser={setCurrentUser} setToggleAuth={setToggleAuth} setMessage={setMessage}/>)
     
   }
 
