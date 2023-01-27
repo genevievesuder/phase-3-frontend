@@ -25,16 +25,25 @@ const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentU
             },
             body: JSON.stringify(newReservation),
           })
-            .then((r) => r.json())
-            .then(updatedRes => {
-              this.setCurrentUser({
-                reservations: this.state.reservations.map(res => {
-                  if(res.id === newReservation.id) {
-                    return updatedRes
-                  } else return res
-                })
-              })
-            })}
+          .then((r) => { 
+            if (r.status === 200) {
+              r.json()
+              .then(updatedRes => {
+                setCurrentUser(currentUser => (
+                { ...currentUser, reservations: currentUser.reservations.map(res => {
+                    if(res.id === updatedRes.reservation.id) {
+                      return updatedRes.reservation
+                    } else {
+                      return res
+                    }
+                  })
+                }))
+            })} else {
+              r.json()
+              .then(msg => alert(msg))
+            }        
+          }) 
+          }
         
 
 //         (msg => {
