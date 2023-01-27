@@ -9,6 +9,8 @@ body {
   /* padding: 0; */
 }
 
+/* NAV START */
+
 .nav {
   /* backdrop-filter: blur(2px); */
   overflow: hidden;
@@ -53,6 +55,10 @@ body {
   background-color: rgba(248, 246, 246, 0.599);
 }
 
+/* NAV END */
+
+/* HOME START */
+
 .home {
   background-image: url("https://www.jetsetter.com//uploads/sites/7/2018/04/8epy_s2K-1380x690.jpeg");
   width: 100%;
@@ -70,22 +76,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.amenities {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/5091bda5e4b0979eac787995/1436892635934-TQ3OGOQ05CRRM4IAT3WZ/norman+pool.jpg");
-  width: 100%;
-  height: 120%;
-  /* position: absolute; */
-  position:fixed;
-  top: 10;
-  left: 0;
-  margin: 0 auto;
-  display: center;
-  padding: 1rem 3rem;
-  background-size: cover;
-  justify-content: center;
-  align-items: flex-start;
-  background-repeat: no-repeat;
-}
+/* HOME END */
+
+/* RESERVATIONS START */
 
 .reservations {
   /* background-image: url("https://le-rex-hotel-tarbes.booked.net/data/Photos/OriginalPhoto/11840/1184097/1184097502/Le-Rex-Hotel-Tarbes-Exterior.JPEG"); */
@@ -176,6 +169,32 @@ body {
   width: 23vw;
 }
 
+/* RESERVATIONS END */
+
+/* AMENITIES START */
+
+.amenities {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5091bda5e4b0979eac787995/1436892635934-TQ3OGOQ05CRRM4IAT3WZ/norman+pool.jpg");
+  width: 100%;
+  height: 120%;
+  /* position: absolute; */
+  position:fixed;
+  top: 10;
+  left: 0;
+  margin: 0 auto;
+  display: center;
+  padding: 1rem 3rem;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-start;
+  background-repeat: no-repeat;
+}
+
+
+/* AMENITIES END */
+
+/* ACCOUNT START */
+
 /* .user-container {
   background-color: rgb(236, 34, 34);
   display: flex grid;
@@ -240,3 +259,5 @@ body {
   width: 100%;
   height: 100%; */
 }
+
+/* ACCOUNT END */

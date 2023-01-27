@@ -3,61 +3,8 @@ import { useState, useEffect } from 'react'
 import UpdateResForm from './UpdateResForm'
 
 const ReservationCard = ({check_in, check_out, room, data, reservationId, setCurrentUser, currentUser}) => {
-const [resRoomImg, setResRoomImg] = useState("")
 const [showUpdateForm, setShowUpdateForm] = useState(false)
 
-// const arr = [...data]
-// // console.log(arr[1].image_url)
-// // console.log("hi")
-//   const room1 = arr[0].image_url
-//   const room2 = arr[1].image_url
-//   const room3 = arr[2].image_url
-//   const room4 = arr[3].image_url
-
-//   const imageFunction = () =>  {
-//     if (room === 1) {
-//     return setResRoomImg(room1)
-//     } else if (room === 2) {
-//       return setResRoomImg(room2)
-//     } else if (room === 3) {
-//       return setResRoomImg(room3)
-//     } else {
-//       return setResRoomImg(room4)
-//     } 
-//   }
-//   imageFunction()
-
-// PATCH
-// function EditReviewForm({ review, onUpdateReview }) {
-//   const [comment, setComment] = useState("");
-//   const [score, setScore] = useState("0");
-
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     fetch(`http://localhost:9292/reviews/${review.id}`, {
-//       method: "PATCH",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         comment: comment,
-//         score: score,
-//       }),
-//     })
-//       .then((r) => r.json())
-//       .then((updatedReview) => onUpdateReview(updatedReview));
-//   }
-
-//   return <form onSubmit={handleSubmit}>{/* controlled form code here*/}</form>;
-// }
-
-
-
-//   return <form onSubmit={handleSubmit}>{/* controlled form code here*/}</form>;
-// }
-
-
-//DELETE
 const handleDelete = () => {
     fetch(`http://localhost:9393/reservations/${reservationId}`, {
       method: "DELETE",
