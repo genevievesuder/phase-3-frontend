@@ -26,8 +26,6 @@ function App() {
   fetchData()
   }, []);
 
-
-  
   return (
     <>
       <Navbar />

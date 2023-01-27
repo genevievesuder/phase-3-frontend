@@ -28,13 +28,6 @@ const ResForm = ({data}) => {
         })
            .then(response => {
             if (response.status !== 201) {
-          //     response.json()
-          //     .then(reservationObj => {
-          //       // debugger
-          //       setReservations(currentReservations => [reservationObj.reservation, ...currentReservations])
-          //     })
-          //   }
-          //   else {
               response.json()
               .then(messageObj => alert(messageObj.message))
             }
