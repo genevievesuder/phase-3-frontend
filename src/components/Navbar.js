@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
       <>
         <nav className="nav">
-        <Link to="/" className="site-title">
+        <Link to="/" className="site-title" >
         Hotel Azure
         </Link>
         <ul className='nav_list'>
