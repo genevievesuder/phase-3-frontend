@@ -43,6 +43,7 @@ const handleShowUpdateForm = () => {
           {showUpdateForm ?  (
           <UpdateResForm        
             currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
             check_in ={check_in} 
             check_out={check_out} 
             room={room} 
