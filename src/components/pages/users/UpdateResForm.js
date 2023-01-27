@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentUser}) => {
+const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentUser, setCurrentUser}) => {
 
     const [newReservation, setNewReservation] = useState({
         room_id: room.id,
@@ -25,9 +25,34 @@ const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentU
             },
             body: JSON.stringify(newReservation),
           })
-            // .then((r) => r.json())
-            // .then((updatedReservation) => onUpdateReservation(updatedReservation));
-        }
+            .then((r) => r.json())
+            .then(updatedRes => {
+              this.setCurrentUser({
+                reservations: this.state.reservations.map(res => {
+                  if(res.id === newReservation.id) {
+                    return updatedRes
+                  } else return res
+                })
+              })
+            })}
+        
+
+//         (msg => {
+//           setCurrentUser((currentUser) => (
+//             {
+//               ...currentUser, 
+//               reservations: [
+//                 ...currentUser.reservations.filter(r => r.id !== reservationId)
+//               ]
+//             }))
+//         })
+//       } else {
+//         r.json()
+//         .then(msg => alert(msg))
+//       }        
+//     }) 
+//     // .then(() => console.log("deleted!"));
+// }
       
       
 
