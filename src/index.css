@@ -173,21 +173,60 @@ body {
 
 /* AMENITIES START */
 
-.amenities {
-  background-image: url("https://images.squarespace-cdn.com/content/v1/5091bda5e4b0979eac787995/1436892635934-TQ3OGOQ05CRRM4IAT3WZ/norman+pool.jpg");
-  width: 100%;
-  height: 120%;
-  /* position: absolute; */
-  position:fixed;
-  top: 10;
-  left: 0;
-  margin: 0 auto;
-  display: center;
-  padding: 1rem 3rem;
-  background-size: cover;
+.amenities-container {
+  background-image: linear-gradient(rgb(25, 8, 41), rgb(108, 108, 104));
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
   justify-content: center;
-  align-items: flex-start;
-  background-repeat: no-repeat;
+}
+
+.row-1{
+  padding: 20px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.amenity-details-container{
+  justify-content: center;
+  display: inline-grid;
+  backdrop-filter: blur(4px);
+  background-color: rgba(215, 209, 209, 0.642);
+  margin-top: 40px;
+  margin-bottom: 18px;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  min-width: 90vw;
+  max-width: 90vw;
+  min-height: 50vh;
+}
+
+.icons{
+  color: azure;
+  height: 20vh;
+  width: 20vw;
+  margin: auto;
+}
+
+.am-name{
+  font-size: 30px;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.am-desc{
+  font-size: 20px;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.amenities-images{
+  background-image: linear-gradient(rgb(108, 108, 104), rgb(25, 8, 41));
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  justify-content: center;
 }
 
 

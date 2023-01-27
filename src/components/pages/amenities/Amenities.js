@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import AmenityDetails from './AmenityDetails';
 
 const Amenities = () => {
 const [ams, setAms] = useState([])
@@ -14,14 +15,23 @@ const [ams, setAms] = useState([])
           }
       }
       fetchData()
-      }, []);
+    }, []);
 
-      console.log(ams)
+    
+    const amenityComponents = ams.map(am=> <AmenityDetails {...am} key={am.id}/>);
+
 
     return(
-       <div className="amenities">
-        <h1>Amenities</h1>
+      <>
+       <div className="amenities-container">
+        <div className="row-1">
+        {amenityComponents}
+        </div>
        </div>
+       <div className="amenities-images">
+
+       </div>
+      </>
     )
 }
 
