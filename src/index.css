@@ -221,14 +221,15 @@ body {
 }
 
 .amenities-images{
-  background-image: linear-gradient(rgb(108, 108, 104), rgb(25, 8, 41));
-  display: flex;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
-  justify-content: center;
+margin: none;
 }
 
+.default-nav {
+  max-width: 20px;
+}
+button.nav.default-nav {
+  max-width: 3px;;
+}
 
 /* AMENITIES END */
 

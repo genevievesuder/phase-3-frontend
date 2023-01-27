@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import AmenityDetails from './AmenityDetails';
+import Slideshow from './Slideshow';
 
 const Amenities = () => {
 const [ams, setAms] = useState([])
@@ -29,7 +30,7 @@ const [ams, setAms] = useState([])
         </div>
        </div>
        <div className="amenities-images">
-
+        <Slideshow/>
        </div>
       </>
     )
