@@ -94,8 +94,13 @@ const handleShowUpdateForm = () => {
             <p className="user-res-date">Check-in Date: {check_in} - Check-out Date: {check_out}</p>
           <button onClick = {handleShowUpdateForm} className="edit-res">Edit your Reservation</ button>
           {showUpdateForm ?  (
-          <UpdateResForm        currentUser={currentUser}
-          check_in ={check_in} check_out={check_out} room={room} data={data} reservationId={reservationId}/>
+          <UpdateResForm        
+            currentUser={currentUser}
+            check_in ={check_in} 
+            check_out={check_out} 
+            room={room} 
+            data={data} 
+            reservationId={reservationId}/>
           ) : (null)}
           <button onClick={handleDelete} className="delete-res">Cancel your Reservation</button>
           </div>

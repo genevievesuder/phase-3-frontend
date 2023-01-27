@@ -18,7 +18,7 @@ const UpdateResForm = ({check_in, check_out, room, data, reservationId, currentU
     }
     const handleEdit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:9292/reservations/${reservationId}`, {
+        fetch(`http://localhost:9393/reservations/${reservationId}`, {
           method: "PATCH",
             headers: {
               "Content-Type": "application/json",

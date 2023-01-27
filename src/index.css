@@ -176,7 +176,7 @@ body {
   width: 23vw;
 }
 
-.user-container {
+/* .user-container {
   background-color: rgb(236, 34, 34);
   display: flex grid;
   grid-template-rows: 15vh 85vh;
@@ -184,13 +184,12 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
-}
+} */
 
 .welcome-user {
   grid-row: 1;
   grid-column: 1 / span 2;
   background-color: rgba(250, 235, 215, 0.349);
-  /* max-width: 97.8%; */
 }
 
 .user-reservation-card {
@@ -198,13 +197,6 @@ body {
   background-color: yellow;
   grid-row: 2;
   grid-column: 1 / span 2;
-  /* min-width: 80vw;
-  max-width: 80vw;
-  margin-left: 20%;
-  margin-right:20%;
-  margin-top: 10%; */
-  /* max-width: 95.8%; */
-  /* align-items: center; */
   min-height: 80vh;
 }
 
@@ -212,26 +204,12 @@ body {
   grid-row: 2;
   grid-column: 1;
   background-color: blue;
-  /* grid-row: 2;
-  grid-column: 1;
-  min-width: 40vw;
-  min-height: 48vh;
-  max-height: 48vh; */
-  /* width: 50%;
-  float: left; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* margin: auto; */
-  /* margin-bottom: 50vw; */
   min-height: 48vh;
 }
 
 .user-res-room {
   background-color: green;
-  /* min-width: 40vw;
-  min-height: 24vh; */
-  /* margin-top: none;
-  padding-top: 2vh; */
+
   height: 50%;
   margin: auto;
 
@@ -239,10 +217,6 @@ body {
 
 .user-res-date {
   background-color: rgb(255, 0, 225);
-  /* min-width: 40vw;
-  min-height: 24vh; */
-  /* margin-top: none;
-  padding-bottom: 2vh; */
   height: 50%;
   margin: auto;
 }
