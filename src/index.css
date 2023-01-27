@@ -107,7 +107,6 @@ body {
 
 }
 
-
 .form-container {
   grid-row: 1;
   grid-column: 1 / span 4;
@@ -116,20 +115,50 @@ body {
 .show-form-btn {
   height:100%;
   width:24.8vw;
+  font-size: 20px;
+  font-family: 'El Messiri', sans-serif;
 }
 
-.res-form {
+.res-form-div{
   float:right;
   text-align: center;
   /* border: 5px solid blue; */
   height: 15vh;
   width:75%;
   align-content: space-around;
-  color:white;
+  background-color:white;
+}
+
+.res-form {
+  /* height: 100%;
+  width: 100%; */
+}
+
+.form-selects{
+  width: 15vw;
+  height: 7vh;
+  float: left;
+}
+
+.form-label{
+
+}
+
+.date-selects{
+  width: 25.1vw;
+  height: 8vh;
+  float: left;
+}
+
+.form-submit-btn{
+  float: right;
+  height:8vh;
+  width:24.8vw;
 }
 
 .room-includes-container {
   grid-row: 2;
+  display: flex;
   flex-direction: row;
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.655);
@@ -137,10 +166,17 @@ body {
   height: 15vh;
   width: 90vw;
   margin: auto;
-  
+  margin-top: 5vh;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-
+.includes-header{
+  margin: auto;
+}
+.includes-list{
+  margin: auto;
+}
 
 .room-container {
   grid-row: 3;
@@ -155,11 +191,13 @@ body {
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.655);
   display:grid;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 45vh;
+  max-height: 45vh;
+  min-width: 20vw;
   width: 23vw;
   padding:1vw;
   justify-self: center;
+  margin-top: 5vh;
 }
 
 .room-titles{
@@ -171,7 +209,7 @@ body {
 
 .bed-images {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90%;
   /* height: 24%; */
   width: 100%;
   margin-left: 1%;
@@ -180,9 +218,16 @@ body {
   padding: 3px;
 }
 
-.hover-bed {
+.hover-bed-container {
   min-height: 23vh;
   width: 23vw;
+  margin: auto;
+}
+
+.hover-bed {
+  font-size: 20px;
+  text-align: center;
+  margin-right: 3vw;;
 }
 
 /* RESERVATIONS END */
