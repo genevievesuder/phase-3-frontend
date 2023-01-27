@@ -1,6 +1,5 @@
 import ResForm from "./ResForm";
 import Rooms from "./Rooms";
-import { useState } from 'react';
 
 const Reservations = ({data}) => {
 
