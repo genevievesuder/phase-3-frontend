@@ -19,7 +19,9 @@ const Rooms = ({bed_size, room_name, image_url}) => {
                 </>
                 ) : ( 
                 <>
+                <div className="hover-bed-container">
                     <p className="hover-bed">{bed_size}<br/></p> 
+                </div>
                 </>
                 )}
             </div>

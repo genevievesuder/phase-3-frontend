@@ -53,9 +53,9 @@ const ResForm = ({data}) => {
     <div className="form-container">
         <button className="show-form-btn" onClick={handleShowForm}>Create a Reservation</button>
             {form ? (
-       <div className="res-form">
-        <form onSubmit={handleSubmit}> 
-            <select onChange={handleChange} name="room_id">
+       <div className="res-form-div">
+        <form className="res-form" onSubmit={handleSubmit}> 
+            <select className="form-selects" onChange={handleChange} name="room_id">
                 <option value = "">Select your Room</option>
                 <option value = "1">The Aegean</option>
                 <option value = "2">The Cerulean</option>
@@ -63,15 +63,15 @@ const ResForm = ({data}) => {
                 <option value = "4">The Lapis Lazuli Suite</option>
             </select>
 
-            <input onChange = {handleChange} name= "first_name" type = "text" value = {data.first_name} placeholder="First Name on Reservation"></input>
-            <input onChange = {handleChange} name= "last_name" type = "text" value = {data.last_name} placeholder="Last Name on Reservation"></input>
-            <input onChange = {handleChange} name= "email" type = "text" value = {data.email} placeholder="Email"></input>
-            <input onChange = {handleChange} name= "phone_number" type = "text" value = {data.phone_number} placeholder="Phone Number"></input>
-            <label>Check-in</label>
-            <input onChange = {handleChange} name = "check_in" value = {data.check_in} type="date" placeholder="Check-in"></input> 
-            <label>Check-Out</label>
-            <input onChange = {handleChange} name = "check_out" value = {data.check_out} type="date" placeholder="Check-Out"></input> 
-            <button type="submit" >Reserve Your Room </button>
+            <input className="form-selects" onChange = {handleChange} name= "first_name" type = "text" value = {data.first_name} placeholder="First Name on Reservation"></input>
+            <input className="form-selects" onChange = {handleChange} name= "last_name" type = "text" value = {data.last_name} placeholder="Last Name on Reservation"></input>
+            <input className="form-selects" onChange = {handleChange} name= "email" type = "text" value = {data.email} placeholder="Email"></input>
+            <input className="form-selects" onChange = {handleChange} name= "phone_number" type = "text" value = {data.phone_number} placeholder="Phone Number"></input>
+            {/* <label className="form-label">Check-in</label> */}
+            <input className="date-selects" onChange = {handleChange} name = "check_in" value = {data.check_in} type="date" placeholder="Check-in"></input> 
+            {/* <label className="form-label">Check-Out</label> */}
+            <input className="date-selects" onChange = {handleChange} name = "check_out" value = {data.check_out} type="date" placeholder="Check-Out"></input> 
+            <button className="form-submit-btn" type="submit" >Reserve Your Room </button>
         </form>
        </div>) : null}
 
