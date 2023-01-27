@@ -9,6 +9,7 @@ const Navbar = () => {
         <nav className="nav">
         <Link to="/" className="site-title" >
         Hotel Azure
+        <img src={process.env.PUBLIC_URL+"/hotel_logo.png"} alt="logo"/>
         </Link>
         <ul className='nav_list'>
           <CustomLink to="/reservations">Reservations</CustomLink>
