@@ -21,8 +21,6 @@ body {
   gap: 2rem;
   padding: 0 1rem;
   min-width: 100%;
-  border: solid 5px black;
-
 }
 
 .site-title {
@@ -238,16 +236,33 @@ body {
   font-family: 'El Messiri', sans-serif;
 }
 
-.amenities-images{
-margin: none;
+.scroll-div{
+  background-color: rgb(108, 108, 104);
 }
 
-.default-nav {
-  max-width: 20px;
-}
-button.nav.default-nav {
-  max-width: 3px;;
-}
+.scroll-container {
+  overflow: scroll;
+  color: white;
+  background-color: white;
+  margin: auto;
+  text-decoration: none;
+  flex-direction: row;
+  display: inline;
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 20px;
+  }
+  
+  .scrollableimages {
+    display: inline-block;
+    object-fit: cover;
+    width: 25em;
+    height: 15em;
+    border: 3px solid rgb(255, 255, 255);
+    color: black;
+  }
+  
+
 
 /* AMENITIES END */
 
