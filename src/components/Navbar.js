@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from '../hotel_logo.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
+/*THIS WORKS FOR LOCAL IMG TOO <img src={window.location.origin + '/yourPathHere.jpg'} /> */
 const Navbar = () => {
 
     return (
