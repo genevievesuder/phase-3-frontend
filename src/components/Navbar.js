@@ -8,15 +8,15 @@ const Navbar = () => {
     return (
       <>
         <nav className="nav">
-        <Link to="/" className="site-title" >
-        <img src={process.env.PUBLIC_URL+"/hotel_logo.png"} alt="logo"/>
+        <Link to="/">
+        <img className="hotel-icon" src={process.env.PUBLIC_URL+"/hotel_logo.png"} alt="logo"/>
         </Link>
         <ul className='nav_list'>
-          <CustomLink to="/reservations">Reservations</CustomLink>
-          <CustomLink to="/amenities">Amenities</CustomLink>
-        </ul>
-        <ul className='nav_account_button'>
-          <CustomLink to="/account" id="account_button">Account</CustomLink>
+          <CustomLink className="res-nav" to="/reservations">Reservations</CustomLink>
+          <CustomLink className="amen-nav" to="/amenities">Amenities</CustomLink>
+          <CustomLink className="acct-nav" to="/account" id="account_button">
+          <img className="user-icon" src={process.env.PUBLIC_URL+"/user_icon.png"} alt="user"/>
+          </CustomLink>
         </ul>
         </nav>
      
