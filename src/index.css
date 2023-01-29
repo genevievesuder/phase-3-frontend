@@ -14,6 +14,7 @@ body {
 
 .nav {
   z-index: 1000;
+  backdrop-filter: blur(5px);
   background-color: rgba(47, 92, 104, 0.559);
   padding: 10px;
   /* text-align: center; */
