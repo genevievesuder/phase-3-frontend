@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -150,14 +151,16 @@ min-height: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 0;
-  position:fixed;
+  /* position:fixed; */
   bottom: 0px;
 
 }
 
+
 .msg-div{
   display: flex;
 }
+
 .message_to_guest {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
@@ -167,25 +170,40 @@ min-height: 100vh;
 }
 
 #message1 {
-  margin-top:40vh;
-  width: 77vw;
+  width: 17vw;
   height: fit-content;
   /* margin:auto; */
+  font-size: clamp(8px, 2vw, 24px);
+  position: relative;
+  top:5vh;
+  left:1vh;
 }
-
-/* #message2 {
-  margin-top:5vh;
-  left: 20em;
-  height: 20vh;
-  width:50vw;
-  margin-left:45vw;
-} */
 
 #message2{
-  margin-top:80vh;
-  /* width: 77vw; */
-  margin-left: 2vw;
+  margin-top:5vh;
+  width: 50vw;
+  margin-left: 32vw;
+  height: fit-content;
+  font-size: clamp(8px, 2vw, 24px);
+  
 }
+
+#home-gallery {
+  position:relative;
+  bottom:-15vh;
+  height:31.5vh;
+
+}
+
+.home-scroll-title {
+  position:relative;
+  font-size: clamp(13px, 2vw, 30px);
+  font-weight: bold;
+  left:2vw;  
+  bottom:-17.5vh;
+  z-index:5;
+}
+
 
 /* HOME END */
 
@@ -237,9 +255,6 @@ min-height: 100vh;
   float: left;
 }
 
-.form-label{
-
-}
 
 .date-selects{
   width: 25.1vw;

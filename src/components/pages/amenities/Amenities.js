@@ -20,19 +20,7 @@ const [ams, setAms] = useState([])
     
     const amenityComponents = ams.map(am=> <AmenityDetails {...am} key={am.id}/>);
     
-    
-
-
-    
-
-
-
-
-
-
-
-
-
+  
     return(
       
       <>
