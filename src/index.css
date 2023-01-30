@@ -188,11 +188,17 @@ min-height: 100vh;
   
 }
 
-#home-gallery {
-  position:relative;
-  bottom:-15vh;
-  height:31.5vh;
+.home-photo-gallery {
 
+  position:absolute;
+  bottom:0vh;
+}
+
+#home-gallery {
+  position:absolute;
+  bottom:-50vh;
+  height:31.5vh;
+  width:100vw;
 }
 
 .home-scroll-title {
