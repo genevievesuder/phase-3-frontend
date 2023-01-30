@@ -21,13 +21,6 @@ const UserHomepage = ({setCurrentUser,currentUser, data}) => {
     <div className="user-container">
       <div className="welcome-user">
         <h1>Welcome, {currentUser.first_name}</h1>
-
-      {currentUser.reservations !== [] ? (
-        "Your upcoming Reservations"
-        ) : (
-        "You currently have no reservations. Book now!")
-      }
-
       </div>   
         {mappedCurrentUserData}
     </div>
