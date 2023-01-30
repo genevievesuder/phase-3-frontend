@@ -14,6 +14,8 @@ and [frontend](https://github.com/genevievesuder/phase-3-frontend)
 
 Install all dependencies with ```npm install``` on the Frontend and ```bundle install``` on the Backend. 
 
+Run commands ```rake db:migrate``` & ```rake db:seed``` to migrate your tables and seed your database.
+
 After everything is installed, start the backend server by running the command ```shotgun``` within your terminal, and the front end server by running the command ```npm start```.
 
 ### Further Reading
