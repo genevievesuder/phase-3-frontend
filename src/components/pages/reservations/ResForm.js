@@ -40,6 +40,7 @@ const ResForm = ({data}) => {
                 check_in: "",
                 check_out:""
               })
+              alert("Your reservation has been submitted. Please allow up to 10 minutes to recieve the confirmation email.");
             }
            })
           .catch(error => alert(error))
