@@ -14,7 +14,13 @@ and [frontend](https://github.com/genevievesuder/phase-3-frontend)
 
 Install all dependencies with ```npm install``` on the Frontend and ```bundle install``` on the Backend. 
 
+
 After everything is installed, you will need to run rake: db:migrate if the tables havent been created yet. You will also need to start the backend server by running the command ```shotgun``` within your terminal, and the front end server by running the command ```npm start```.
+=======
+Run commands ```rake db:migrate``` & ```rake db:seed``` to migrate your tables and seed your database.
+
+After everything is installed, start the backend server by running the command ```shotgun``` within your terminal, and the front end server by running the command ```npm start```.
+
 
 ### Further Reading
 [View our blog post about our project's POST fetch request](https://medium.com/@genevievesuder/making-a-post-fetch-request-from-a-reactjs-to-a-ruby-sinatra-api-81f044d13e70)
